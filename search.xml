@@ -17,11 +17,27 @@
   <entry>
     <title>看别人的代码是程序员最难受的一件事</title>
     <url>/2021/11/09/%E7%9C%8B%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BB%A3%E7%A0%81%E6%98%AF%E7%A8%8B%E5%BA%8F%E5%91%98%E6%9C%80%E9%9A%BE%E5%8F%97%E7%9A%84%E4%B8%80%E4%BB%B6%E4%BA%8B/</url>
-    <content><![CDATA[<p>接手项目又过了一个月，之前的需求还只是修修改改一些 UI 组件、颜色字体，或者整整后台系统用老 JQ 搭建的项目。</p>
+    <content><![CDATA[<p>接手项目又过了一个月，之前的需求还只是修修改改一些 ui 组件、颜色字体，或者整整后台系统用老 jq 搭建的项目。</p>
 <p>前几天产品突然搞了个临时需求，这个需求需要改动的东西一点都不多，但是需要对核心逻辑代码理解透彻了才能知道在哪里改。</p>
 <p>核心部分的功能分了 6 个组件，每个组件都有 4、5 千行代码，搞清楚这几个组件怎么分别用哪些数据就花了我一天时间，再从特定的数据定位进去找到要改的那个组件，映入眼帘满满当当的全是计算和定位方法，注释虽说有但是根本不顶用，那感觉就像拿到了一本没有索引的字典，想找一个字都不知道上下文在哪。</p>
 <p>先勉强把需要修改的 css 部分搞定了，然后再搞定了通过 js 修改 css 的部分，最后实在是不知道怎么整了，开始打电话场外求助，最后运营又催，产品又催，真的是上火，都冒出来口腔溃疡了，最后在给前一任老哥打了很多个电话之后，几乎是手把手的把需求做完了，做完的那一刻感觉就像陈年老便秘终于通畅了。</p>
 <p>今晚就双十一了，老婆突然又允许我买电脑配件了，说是磨不过我，我明明都说了不买了，可能是受不了我一直在哔哔吧。</p>
+<p>人生不易</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Charles(花瓶)HTTP抓包</title>
+    <url>/2022/01/04/Charles-%E8%8A%B1%E7%93%B6-HTTP%E6%8A%93%E5%8C%85/</url>
+    <content><![CDATA[<p>张小龙：“每天有 1 亿人教我做产品”</p>
+<p>TMD你微信浏览器内核跟屎一样难调试！我手机上的微信不管 debugtbs.qq.com 还是 debugmm.qq.com/?forcex5=false 统统不管用！想要换成安卓原生 webview 然后用 chrome 的 usb 调试简直比登天还难！</p>
+<p>没办法，只能勉强用 v-console 了</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/vconsole@latest/dist/vconsole.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vConsole = <span class="keyword">new</span> <span class="built_in">window</span>.VConsole();</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>言归正传，如何用 Charle 抓HTTP请求的包，注意，这里是HTTP。</p>
+<p>假设你已经安装好了 Charle ，在工具栏找到 Proxy &gt; Proxy Settings</p>
+<p><img src="/.io//2022-01-04-01.png" alt="Proxy Settings"></p>
+<p>注意 HTTP Proxy 的端口，如果你这时候有其他项目，比如 vue 脚手架或者自己跑个服务什么的在占用默认的 8888 端口就不要在这里的设置同样的端口了，会报错端口冲突的。</p>
+<p>设置好自己满意的端口，就可以 ok 保存了，然后再去工具栏找到 Proxy &gt; Windows Proxy ，确保是已经勾选的开启状态，这时候 Charles 就已经在抓取你电脑上的每个 HTTP 请求了。</p>
 <p>人生不易</p>
 ]]></content>
   </entry>
