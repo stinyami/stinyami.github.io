@@ -199,7 +199,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-01-04 10:34:02 / 修改时间：15:19:04" itemprop="dateCreated datePublished" datetime="2022-01-04T10:34:02+08:00">2022-01-04</time>
+              <time title="创建时间：2022-01-04 10:34:02 / 修改时间：16:07:47" itemprop="dateCreated datePublished" datetime="2022-01-04T10:34:02+08:00">2022-01-04</time>
             </span>
 
           
@@ -229,9 +229,11 @@
 
 <p>言归正传，如何用 Charle 抓HTTP请求的包，注意，这里是HTTP。</p>
 <p>假设你已经安装好了 Charle ，在工具栏找到 Proxy &gt; Proxy Settings</p>
-<p><img src="/.io//2022-01-04-01.png" alt="Proxy Settings"></p>
-<p>注意 HTTP Proxy 的端口，如果你这时候有其他项目，比如 vue 脚手架或者自己跑个服务什么的在占用默认的 8888 端口就不要在这里的设置同样的端口了，会报错端口冲突的。</p>
+<img src="/2022/01/04/Charles-%E8%8A%B1%E7%93%B6-HTTP%E6%8A%93%E5%8C%85/2022-01-04-01.png" class="" title="Proxy Settings">
+
+<p>注意 HTTP Proxy 的端口，如果你这时候有其他服务，比如 vue 脚手架或者自己跑个别的服务什么的，在占用默认的 8888 端口就不要在这里的设置同样的端口了，会报错端口冲突的。</p>
 <p>设置好自己满意的端口，就可以 ok 保存了，然后再去工具栏找到 Proxy &gt; Windows Proxy ，确保是已经勾选的开启状态，这时候 Charles 就已经在抓取你电脑上的每个 HTTP 请求了。</p>
+<p>Tips：已经跑在你电脑上的网页服务如果也想要被 Charles 抓包的话，一定要使用本机 ip 访问， localhost 可是不管用的。</p>
 <p>人生不易</p>
 
       
